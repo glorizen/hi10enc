@@ -1,9 +1,33 @@
+import os
 from flask import Flask 
+from flask import render_template
+from flask import send_from_directory
+
+
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = 'd:/temp'
+
+@app.route('/static/metronic_v5.0.2/metronic_v5.0.2/theme/dist/html/default')
+def default():
+  # return send_from_directory(app.config['UPLOAD_FOLDER'])
+  return None
+
+@app.route('/static/metronic_v5.0.2/metronic_v5.0.2/theme/dist/html/demo2')
+def demo2():
+  # return send_from_directory(app.config['UPLOAD_FOLDER'])
+  return None
+
+@app.route('/static/styles')
+def styles():
+  return None
+
+@app.route('/static/scripts')
+def scripts():
+  return None
 
 @app.route('/')
 def index():
-  return 'Hello World!'
+  return render_template('site_specific/index.html')
 
 
 @app.route('/encode/video')
