@@ -1,4 +1,12 @@
-textarea {
+textarea.mspace {
   font-family: Monospace !important;
   font-size: 10px !important;
+}
+
+.bash-commmand {
+  border: 1px solid #DDDDDD;
+  background-color: rgba(230, 230, 230, 0.5);
+  padding: 8px; font-family: monospace; text-align: center;
+  color: black;
+  font-weight: 600;
 }
