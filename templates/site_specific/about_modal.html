@@ -5,7 +5,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
-          Help on Filters & Scripts
+          About the Web Application
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">
@@ -14,38 +14,32 @@
         </button>
       </div>
       <div class="modal-body">
-        <h5>
-          Popover in a modal
-        </h5>
-        <p>
-          This
-          <a href="#" role="button" data-toggle="m-popover" class="btn btn-secondary popover-test" title="" data-content="Popover body content is set in this attribute." data-original-title="Popover title">
-            button
-          </a>
-          triggers a popover on click.
-        </p>
-        <hr>
-        <h5>
-          Tooltips in a modal
-        </h5>
-        <p>
-          <a href="#" class="tooltip-test" data-toggle="m-tooltip" title="" data-original-title="Tooltip">
-            This link
-          </a>
-          and
-          <a href="#" data-toggle="m-tooltip" class="tooltip-test" title="" data-original-title="Tooltip">
-            that link
-          </a>
-          have tooltips on hover.
+        <p>This application is supposed to act as a stepping stone for noobs to get started
+          on their encoding adventure. It relies heavily on <span class="enclose-light-dark">
+          ffmpeg</span> since it provides all functionalities in a single package. 
+          Users don't need to install any other applications to encode things.
+          <hr>
+          Muxing, which is combining the data streams like video, audio, subtitle etc., can be
+          done by ffmpeg to some extend but for the time being its muxing is a bit buggy and
+          can't be trusted for reliable playback. Hence, users will have to use 
+          <span class="enclose-light-dark">mkvmerge</span> for the muxing part which is 
+          more-or-less the last part anyway.
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+        <button type="button" class="btn btn-secondary m-btn--square" data-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary">
-          Save changes
-        </button>
+        <a href="https://www.ffmpeg.org/download.html" target="_blank">
+          <button type="button" class="btn btn-outline-primary m-btn--square">
+            Download ffmpeg
+          </button>
+        </a>
+        <a href="https://mkvtoolnix.download/downloads.html" target="_blank">
+          <button type="button" class="btn btn-outline-primary m-btn--square">
+            Download mkvmerge
+          </button>
+        </a>
       </div>
     </div>
   </div>
