@@ -1,12 +1,22 @@
-textarea.mspace {
+.mspace {
   font-family: Monospace !important;
-  font-size: 10px !important;
+  font-size: 11px !important;
 }
 
-.bash-commmand {
+.bash-command {
   border: 1px solid #DDDDDD;
   background-color: rgba(230, 230, 230, 0.5);
-  padding: 8px; font-family: monospace; text-align: center;
+  padding: 8px;
+  font-family: monospace;
   color: black;
   font-weight: 600;
+}
+
+.enclose-light-dark {
+  padding: 1px 7px 3px 7px;
+  border-radius: 35px; 
+  font-size: 12px; 
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white; 
+  font-weight: 500;
 }
