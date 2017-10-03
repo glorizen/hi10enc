@@ -1,7 +1,11 @@
 import os
-from flask import Flask 
+from flask import Flask
+from flask import request
+from flask import jsonify
 from flask import render_template
 from flask import send_from_directory
+from parsers import MediaParser
+from parsers import AvsParser
 
 
 app = Flask(__name__)
@@ -83,4 +87,26 @@ def libfdk_info():
 @app.route('/merge/mkvmerge')
 def mkvmerge_command():
   return 'mkvmerge command here.'
+
+
+@app.route('/ajax/metadata', methods=["GET", "POST"])
+def ajax_parse_metadata():
+
+  xml_string = request.json['mediainfo']
+  avs_string = request.json['avscript']
+
+  if not xml_string:
+    pass
+
+  media_parser = MediaParser(xml_string)
+  avs_parser = AvsParser(avs_string)
+
+  data = dict()
+  data['general_details'] = media_parser.get_general_details(media_parser.mediainfo)
+  data['video_details'] = media_parser.get_video_details(media_parser.mediainfo)
+  data['audio_details'] = media_parser.get_audio_details(media_parser.mediainfo)
+  data['subtitle_details'] = media_parser.get_subtitle_details(media_parser.mediainfo)
+  data['menu_details'] = media_parser.get_menu_details(media_parser.mediainfo)
+
+  return jsonify(data)
 
