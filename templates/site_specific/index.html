@@ -1495,7 +1495,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																</div>
 															</div>
 															<div class="m-portlet__head-tools">
-																<button type="button" class="btn m-btn--square btn-sm btn-outline-info"
+																<button type="button" class="btn m-btn--square btn-sm btn-outline-metal"
 																	data-toggle="modal" data-target="#{{ mediainfo_modal_id }}">
 																	Detailed Help
 																</button>
@@ -1509,7 +1509,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																			MediaInfo of Local File
 																		</label>
 																		<textarea type="text" class="form-control m-input m-input--square mspace" 
-																			rows=12 placeholder="Paste mediainfo of targeted file in xml format here..."></textarea>
+																			rows=12 id="mediainfo" placeholder="Paste mediainfo of targeted file in xml format here..."></textarea>
 																	
 																	</div>
 																<!-- </div> -->
@@ -1531,7 +1531,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																</div>
 															</div>
 															<div class="m-portlet__head-tools">
-																<button type="button" class="btn m-btn--square btn-sm btn-outline-info"
+																<button type="button" class="btn m-btn--square btn-sm btn-outline-metal"
 																	data-toggle="modal" data-target="#{{ scripts_modal_id }}">
 																	Detailed Help
 																</button>
@@ -1545,7 +1545,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																			Avscript prepared for Local File
 																		</label>
 																		<textarea type="text" class="form-control m-input m-input--square mspace" 
-																			rows=8 placeholder="Paste avscript (.avs) content here..."></textarea>
+																			rows=8 id="avscript" placeholder="Paste avscript (.avs) content here..."></textarea>
 																	</div>
 																<!-- </div> -->
 															<!-- </div> -->
@@ -1554,9 +1554,228 @@ License: You must have a valid license purchased only from themeforest(the above
 													<!--end:: Widgets/New Users-->
 												</div>
 											</div>
+											<div class="row">
+												<div class="col-xl-12 m--align-right">
+													<button type="button" target="#encode-filtering" 
+														class="btn m-btn--square  btn-outline-primary btn-lg next-step-link">
+														Proceed to Next Step &gt;&gt;
+													</button>
+												</div>
+											</div>
 										</div>
 										<div class="tab-pane process-tab" id="encode-filtering" role="tabpanel">
-											It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently.
+											<div class="row">
+												
+												<div id="general_details" class="col-xl-12 m-portlet">
+													<div class="m-portlet__head">
+														<div class="m-portlet__head-caption">
+															<div class="m-portlet__head-title">
+																<span class="m-portlet__head-icon">
+																	<i class="flaticon-multimedia"></i>
+																</span>
+																<h3 class="m-portlet__head-text">
+																	General Details
+																	<small>
+																		Fetched via Mediainfo
+																	</small>
+																</h3>
+															</div>
+														</div>
+													</div>
+													<div class="m-portlet__body">
+														<!-- <div class="row file-property m--margin-15 clickable">
+															<div class="property-key">File Name</div>
+															<div class="property-value">(Hi10)_The_Sky_Crawlers_(BD_1080p)_(THORA)_(86A62E3B).mkv</div>
+														</div> -->
+													</div>
+													<div class="m-portlet__foot m--hide">
+														<div class="row">
+															<div class="col-lg-6">
+																Portlet footer:
+															</div>
+															<div class="col-lg-6">
+																<button type="submit" class="btn btn-primary">
+																	Submit
+																</button>
+																<span class="m--margin-left-10">
+																	or
+																	<a href="#" class="m-link m--font-bold">
+																		Cancel
+																	</a>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div id="video_details" class="col-xl-12 m-portlet">
+													<div class="m-portlet__head">
+														<div class="m-portlet__head-caption">
+															<div class="m-portlet__head-title">
+																<span class="m-portlet__head-icon">
+																	<i class="flaticon-multimedia"></i>
+																</span>
+																<h3 class="m-portlet__head-text">
+																	Video Details
+																	<small>
+																		Fetched via Mediainfo
+																	</small>
+																</h3>
+															</div>
+														</div>
+													</div>
+													<div class="m-portlet__body">
+														<!-- <div class="row file-property m--margin-15 clickable">
+															<div class="property-key">File Name</div>
+															<div class="property-value">(Hi10)_The_Sky_Crawlers_(BD_1080p)_(THORA)_(86A62E3B).mkv</div>
+														</div> -->
+													</div>
+													<div class="m-portlet__foot m--hide">
+														<div class="row">
+															<div class="col-lg-6">
+																Portlet footer:
+															</div>
+															<div class="col-lg-6">
+																<button type="submit" class="btn btn-primary">
+																	Submit
+																</button>
+																<span class="m--margin-left-10">
+																	or
+																	<a href="#" class="m-link m--font-bold">
+																		Cancel
+																	</a>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div id="audio_details" class="col-xl-12 m-portlet">
+													<div class="m-portlet__head">
+														<div class="m-portlet__head-caption">
+															<div class="m-portlet__head-title">
+																<span class="m-portlet__head-icon">
+																	<i class="flaticon-multimedia"></i>
+																</span>
+																<h3 class="m-portlet__head-text">
+																	Audio Details
+																	<small>
+																		Fetched via Mediainfo
+																	</small>
+																</h3>
+															</div>
+														</div>
+													</div>
+													<div class="m-portlet__body">
+														<!-- <div class="row file-property m--margin-15 clickable">
+															<div class="property-key">File Name</div>
+															<div class="property-value">(Hi10)_The_Sky_Crawlers_(BD_1080p)_(THORA)_(86A62E3B).mkv</div>
+														</div> -->
+													</div>
+													<div class="m-portlet__foot m--hide">
+														<div class="row">
+															<div class="col-lg-6">
+																Portlet footer:
+															</div>
+															<div class="col-lg-6">
+																<button type="submit" class="btn btn-primary">
+																	Submit
+																</button>
+																<span class="m--margin-left-10">
+																	or
+																	<a href="#" class="m-link m--font-bold">
+																		Cancel
+																	</a>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div id="subtitle_details" class="col-xl-12 m-portlet">
+													<div class="m-portlet__head">
+														<div class="m-portlet__head-caption">
+															<div class="m-portlet__head-title">
+																<span class="m-portlet__head-icon">
+																	<i class="flaticon-multimedia"></i>
+																</span>
+																<h3 class="m-portlet__head-text">
+																	Subtitle Details
+																	<small>
+																		Fetched via Mediainfo
+																	</small>
+																</h3>
+															</div>
+														</div>
+													</div>
+													<div class="m-portlet__body">
+														<!-- <div class="row file-property m--margin-15 clickable">
+															<div class="property-key">File Name</div>
+															<div class="property-value">(Hi10)_The_Sky_Crawlers_(BD_1080p)_(THORA)_(86A62E3B).mkv</div>
+														</div> -->
+													</div>
+													<div class="m-portlet__foot m--hide">
+														<div class="row">
+															<div class="col-lg-6">
+																Portlet footer:
+															</div>
+															<div class="col-lg-6">
+																<button type="submit" class="btn btn-primary">
+																	Submit
+																</button>
+																<span class="m--margin-left-10">
+																	or
+																	<a href="#" class="m-link m--font-bold">
+																		Cancel
+																	</a>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div id="menu_details" class="col-xl-12 m-portlet">
+													<div class="m-portlet__head">
+														<div class="m-portlet__head-caption">
+															<div class="m-portlet__head-title">
+																<span class="m-portlet__head-icon">
+																	<i class="flaticon-multimedia"></i>
+																</span>
+																<h3 class="m-portlet__head-text">
+																	Menu Details
+																	<small>
+																		Fetched via Mediainfo
+																	</small>
+																</h3>
+															</div>
+														</div>
+													</div>
+													<div class="m-portlet__body">
+														<!-- <div class="row file-property m--margin-15 clickable">
+															<div class="property-key">File Name</div>
+															<div class="property-value">(Hi10)_The_Sky_Crawlers_(BD_1080p)_(THORA)_(86A62E3B).mkv</div>
+														</div> -->
+													</div>
+													<div class="m-portlet__foot m--hide">
+														<div class="row">
+															<div class="col-lg-6">
+																Portlet footer:
+															</div>
+															<div class="col-lg-6">
+																<button type="submit" class="btn btn-primary">
+																	Submit
+																</button>
+																<span class="m--margin-left-10">
+																	or
+																	<a href="#" class="m-link m--font-bold">
+																		Cancel
+																	</a>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 										<div class="tab-pane process-tab" id="post-scripting" role="tabpanel">
 											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
